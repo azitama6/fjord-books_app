@@ -32,5 +32,5 @@
 <br>
 
 <%= link_to Book.human_attribute_name(:new_book), new_book_path %>
-<%= link_to 'EN', "/books?locale=en" %>
-<%= link_to 'JP', "/books?locale=ja" %>
+<%= link_to 'EN', books_path(locale: :en) %>
+<%= link_to 'JP', books_path(locale: :ja) %>
