@@ -1,6 +1,22 @@
 ja:
-  index: "読書メモ一覧"
-  title: "タイトル"
-  memo: "メモ"
-  author: "著者"
-  picture: "写真"
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "バリデーションに失敗しました: %{errors}"
+        restrict_dependent_destroy:
+          has_one: "%{record}が存在しているので削除できません"
+          has_many: "%{record}が存在しているので削除できません"
+    models:
+      books: 本
+    attributes:
+      book:
+        index: "読書メモ一覧"
+        title: "タイトル"
+        memo: "メモ"
+        author: "著者"
+        picture: "写真"
+        new_book: "新規登録"
+        edit: "編集"
+        show: "詳細"
+        destroy: "削除"
+        sure: "よろしいですか？"

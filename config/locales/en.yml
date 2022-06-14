@@ -30,8 +30,24 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  index: "BOOKS_INDEX"
-  title: "Title"
-  memo: "Memo"
-  author: "Author"
-  picture: "Picture"
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "バリデーションに失敗しました: %{errors}"
+        restrict_dependent_destroy:
+          has_one: "%{record}が存在しているので削除できません"
+          has_many: "%{record}が存在しているので削除できません"
+    models:
+      books: 本
+    attributes:
+      book:
+        index: "BOOKS_INDEX"
+        title: "Title"
+        memo: "Memo"
+        author: "Author"
+        picture: "Picture"
+        new_book: "New_Book"
+        edit: "Edit"
+        show: "Show"
+        destroy: "Destroy"
+        sure: "Are you sure?"
