@@ -1,16 +1,17 @@
 en:
   activerecord:
     models:
-      books: 本
+      book: Book_Memo
     attributes:
       book:
-        index: "BOOKS_INDEX"
-        title: "Title"
-        memo: "Memo"
-        author: "Author"
-        picture: "Picture"
-        new_book: "New_Book"
-        edit: "Edit"
-        show: "Show"
-        destroy: "Destroy"
-        sure: "Are you sure?"
+        title: Title
+        memo: Memo
+        author: Author
+        picture: Picture
+  views:
+    common:
+      new: New
+      show: Show
+      edit: Edit
+      destroy: Destroy
+      delete_confirmation: Are you sure?
