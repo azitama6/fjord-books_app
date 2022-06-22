@@ -15,3 +15,8 @@ en:
       edit: Edit
       destroy: Destroy
       delete_confirmation: Are you sure?
+  controllers:
+    notice:
+      create: successfully created.
+      update: successfully updated.
+      destroy: successfully destroyed.
