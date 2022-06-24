@@ -13,7 +13,12 @@
 <body>
   <% if user_signed_in? %>
   <header>
-    <div><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "text-white" %></div>
+    <table>
+      <tr>
+        <td><%= link_to "TOP", top_index_path %></td>
+        <td><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></td>
+      </tr>
+    </table>
   </header>
   <% end %>
   <%= yield %>
