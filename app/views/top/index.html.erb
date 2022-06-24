@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+<h1><%= t('views.common.top') %></h1>
+<table>
+  <tbody>
+    <tr>
+      <td><%= link_to Book.model_name.human, books_path %></td>
+    </tr>
+    <tr>
+      <td><%= link_to User.model_name.human, users_path %></td>
+    </tr>
+  </tbody>
+</table>
