@@ -17,6 +17,6 @@ en:
       delete_confirmation: Are you sure?
   controllers:
     notice:
-      create: successfully created.
-      update: successfully updated.
-      destroy: successfully destroyed.
+      create: "%{name} was successfully created."
+      update: "%{name} was successfully updated."
+      destroy: "%{name} was successfully destroyed."

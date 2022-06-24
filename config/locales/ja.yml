@@ -17,6 +17,6 @@ ja:
       delete_confirmation: よろしいですか？
   controllers:
     notice:
-      create: 作成は完了しました。
-      update: 編集は完了しました。
-      destroy: 削除は完了しました。
+      create: "%{name}が作成されました。"
+      update: "%{name}が編集されました。"
+      destroy: "%{name}が削除されました。"
