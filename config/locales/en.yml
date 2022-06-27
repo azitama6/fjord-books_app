@@ -15,6 +15,8 @@ en:
       edit: Edit
       destroy: Destroy
       delete_confirmation: Are you sure?
+      title_new: "New %{name}"
+      title_edit: "Editing %{name}"
   controllers:
     notice:
       create: "%{name} was successfully created."
