@@ -15,8 +15,8 @@
   <header>
     <table>
       <tr>
-        <td><%= link_to "TOP", top_index_path %></td>
-        <td><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></td>
+        <td><%= link_to t('views.common.title_top'), top_index_path %></td>
+        <td><%= link_to t('views.common.title_log_out'), destroy_user_session_path, method: :delete %></td>
       </tr>
     </table>
   </header>
