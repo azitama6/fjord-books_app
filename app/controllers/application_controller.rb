@@ -4,17 +4,24 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!
 
-  def after_sign_in_path_for(resource)
+  def after_sign_in_path_for(_resource)
     top_index_path
   end
 
-  def after_sign_out_path_for(resource)
+  def after_sign_out_path_for(_resource)
     new_user_session_path
   end
 
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name])
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[name post_code address comment])
+  end
+
+  def ensure_user
+    @posts = current_user.user_id
+    @post = @posts.find_by(id: params[:id])
+    redirect_to users_path unless @post
   end
 end
