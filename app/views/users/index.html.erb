@@ -15,7 +15,11 @@
     <tr>
       <td><%= user.name %></td>
       <td><%= link_to t('views.common.profile'), user %></td>
-      <td><%= link_to t('views.common.edit'), edit_user_registration_path %></td>
+      <% if user.user_id == current_user.user_id %>
+        <td><%= link_to t('views.common.edit'), edit_user_registration_path %></td>
+      <% else %>
+        <td></td>
+      <% end %>
     </tr>
     <% end %>
   </tbody>

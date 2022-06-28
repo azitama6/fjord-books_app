@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<h1><%= t('views.common.profile') %></h1>
 
 <p>
   <strong><%= User.human_attribute_name(:name) %>:</strong>
@@ -11,6 +12,11 @@
 </p>
 
 <p>
+  <strong><%= User.human_attribute_name(:post_code) %>:</strong>
+  <%= @users.post_code %>
+</p>
+
+<p>
   <strong><%= User.human_attribute_name(:address) %>:</strong>
   <%= @users.address %>
 </p>
@@ -19,6 +25,7 @@
   <strong><%= User.human_attribute_name(:comment) %>:</strong>
   <%= @users.comment %>
 </p>
-
-<%= link_to t('views.common.edit'), edit_user_path(@users) %> |
+<% if @users.user_id == current_user.user_id %>
+<%= link_to t('views.common.edit'), edit_user_registration_path %> |
+<% end %>
 <%= link_to t('views.common.back'), users_path %>
