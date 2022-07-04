@@ -13,14 +13,10 @@ class UsersController < ApplicationController
   def edit; end
 
   def update
-    respond_to do |format|
-      if @users.update(user_params)
-        format.html { redirect_to @users, notice: t('controllers.common.notice_update', name: User.model_name.human) }
-        format.json { render :show, status: :ok, location: @book }
-      else
-        format.html { render :edit }
-        format.json { render json: @users.errors, status: :unprocessable_entity }
-      end
+    if @users.update(user_params)
+      redirect_to @users, notice: t('controllers.common.notice_update', name: User.model_name.human)
+    else
+      render :edit
     end
   end
 
