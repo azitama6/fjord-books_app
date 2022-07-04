@@ -220,6 +220,7 @@ ja:
       title_log_in: ログイン
       title_log_out: ログアウト
       profile: プロフィール
+      title_book_app: 本アプリ
     pagination:
       first: '最初'
       last: '最後'
