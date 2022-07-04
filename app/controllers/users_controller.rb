@@ -31,8 +31,6 @@ class UsersController < ApplicationController
   end
 
   def ensure_user
-    @posts = current_user.user_id
-    @post = @posts.find_by(id: params[:id])
-    redirect_to new_post_path unless @post
+    redirect_to top_index_path unless current_user.user_id == @users.user_id
   end
 end

@@ -18,10 +18,4 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[name])
     devise_parameter_sanitizer.permit(:account_update, keys: %i[name post_code address comment])
   end
-
-  def ensure_user
-    @posts = current_user.user_id
-    @post = @posts.find_by(id: params[:id])
-    redirect_to users_path unless @post
-  end
 end
