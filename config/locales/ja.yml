@@ -215,6 +215,12 @@ ja:
       delete_confirm: よろしいですか？
       title_new: "%{name}の新規作成"
       title_edit: "%{name}の編集"
+      title_top: トップページ
+      title_sign_up: サインイン
+      title_log_in: ログイン
+      title_log_out: ログアウト
+      profile: プロフィール
+      title_book_app: 本アプリ
     pagination:
       first: '最初'
       last: '最後'

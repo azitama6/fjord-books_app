@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BooksApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title><%= t('views.common.title_book_app') %></title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    <%= yield %>
-  </body>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <% if user_signed_in? %>
+  <header>
+    <table>
+      <tr>
+        <td><%= link_to t('views.common.title_top'), top_index_path %></td>
+        <td><%= link_to t('views.common.title_log_out'), destroy_user_session_path, method: :delete %></td>
+      </tr>
+    </table>
+  </header>
+  <% end %>
+  <%= yield %>
+</body>
+
 </html>
