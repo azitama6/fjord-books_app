@@ -2,7 +2,6 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -13,6 +12,11 @@
   <% end %>
 
   <%= render 'devise/registrations/profile_fields', f: f %>
+
+  <div class="field">
+    <%= f.label t('.current_icon', resource: resource.class.model_name.human) %>
+    <%= image_tag @user.icon.variant(resize: "100x100", border:'1') if @user.icon.present? %>
+  </div>
 
   <div class="field">
     <%= f.label :password %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it') %></i>)<br />
