@@ -1,4 +1,4 @@
-<h1><%= User.model_name.human %></h1>
+<h1><%= t('views.common.title_following', name: @name) %></h1>
 
 <table>
   <thead>
@@ -10,7 +10,7 @@
   </thead>
 
   <tbody>
-    <% @users.where.not(id: current_user.id).each do |user| %>
+    <% @users.each do |user| %>
       <tr>
         <th>
           <% if user.avatar.attached? %>

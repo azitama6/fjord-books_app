@@ -6,10 +6,12 @@ class UsersController < ApplicationController
   end
 
   def followings
+    @name = User.with_attached_avatar.find(params[:id]).name
     @users = User.with_attached_avatar.find(params[:id]).followings.order(:id).page(params[:page])
   end
 
   def followers
+    @name = User.with_attached_avatar.find(params[:id]).name
     @users = User.with_attached_avatar.find(params[:id]).followers.order(:id).page(params[:page])
   end
 
